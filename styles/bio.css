@@ -1,11 +1,10 @@
 @font-face {
   font-family: "CustomFont";
-  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
+  src: url(Assets/Font/AvenirNextLTPro-Regular.otf) format("truetype");
 }
 * {
   margin: 0;
   padding: 0;
-  font-family: "CustomFont" sans-serif;
 }
 
 body {
@@ -17,6 +16,9 @@ body {
   display: block;
   color: #FFFFFF;
 }
+.header--wrapper {
+  background-color: #323232;
+}
 @media screen and (min-width: 768px) {
   .header {
     display: flex;
@@ -25,6 +27,12 @@ body {
     padding-left: 3rem;
     gap: 3rem;
     padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    max-width: 1020px;
+    margin: auto;
   }
 }
 .header__title {
@@ -40,9 +48,11 @@ body {
   }
 }
 .header__title--name {
-  font-weight: 300;
+  font-family: "CustomFont", sans-serif;
+  font-weight: 100;
   font-size: 2rem;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
+  line-height: 3.2rem;
 }
 @media screen and (min-width: 768px) {
   .header__title--name {
@@ -51,11 +61,13 @@ body {
 }
 .header__nav {
   display: flex;
-  padding: 1rem;
   justify-content: space-around;
 }
 .header__nav--title {
+  font-family: "CustomFont", sans-serif;
   font-size: 1rem;
+  font-weight: 200;
+  line-height: 3rem;
 }
 @media screen and (min-width: 768px) {
   .header__nav--title {
@@ -78,17 +90,41 @@ body {
     height: 26rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 1020px;
+    margin: auto;
+  }
+}
 .hero__title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #FFFFFF;
-  padding: 2rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 4rem;
+  }
 }
 
 .article__title {
   font-size: 1.6rem;
+  font-weight: 600;
   padding: 1rem 0;
   margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .article__title {
+    font-size: 3.3rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .article__title {
+    max-width: 1020px;
+    margin: auto;
+  }
 }
 
 .article {
@@ -101,22 +137,41 @@ body {
     max-width: 75%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .article {
+    max-width: 1020px;
+    margin: auto;
+  }
+}
 .article__bold {
-  font-size: 0.9em;
-  line-height: 2.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
   margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .article__bold {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
 }
 .article__boldtitle {
   margin: 1rem 0;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .paragraph__title {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 100;
   padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .paragraph__title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
 }
 @media screen and (min-width: 768px) {
   .paragraph__wrapper {
@@ -126,7 +181,7 @@ body {
 }
 .paragraph__first, .paragraph__secound {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 100;
   padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -137,6 +192,12 @@ body {
 
 .gallery {
   background-color: #FAFAFA;
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    max-width: 1020px;
+    margin: auto;
+  }
 }
 .gallery__heading {
   font-size: 2rem;
@@ -170,17 +231,32 @@ body {
   max-width: 82%;
   margin: auto;
 }
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    max-width: 1020px;
+    margin: auto;
+  }
+}
 .footer__logo--name {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .footer__logo--name {
     font-size: 2rem;
+    font-weight: 100;
     display: contents;
   }
 }
 .footer__header {
   font-size: 2rem;
+  font-weight: 100;
+  width: 13rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__header {
+    font-weight: 600;
+    width: 13rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer__wrapper {
@@ -199,6 +275,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__social {
     display: flex;
+    padding: 2rem 0;
   }
 }
 .footer__information {
@@ -212,4 +289,29 @@ body {
 .footer__information__wrapper {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__information {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer__sitename {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__sitename {
+    display: none;
+  }
+}
+.footer__copyright {
+  font-size: 1;
+  font-weight: 100;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
