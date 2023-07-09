@@ -22,7 +22,7 @@ body {
   display: block;
   color: $primaryWhite;
 
-  @include tablet{
+  @include tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -34,9 +34,8 @@ body {
   &__title {
     @include flex-center;
 
-    @include desktop{
+    @include desktop {
       @include flex-center;
-
     }
 
     &--name {
@@ -44,7 +43,7 @@ body {
       font-size: 2rem;
       padding-top: 1rem;
 
-      @include tablet{
+      @include tablet {
         padding: 0;
       }
     }
@@ -56,7 +55,7 @@ body {
 
     &--title {
       font-size: 1rem;
-      @include tablet{
+      @include tablet {
         margin: 0 3rem;
       }
     }
@@ -75,7 +74,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  @include tablet{
+  @include tablet {
     height: 26rem;
   }
   &__title {
@@ -90,7 +89,6 @@ body {
   font-size: 1.6rem;
   padding: 1rem 0;
   margin-left: 1rem;
-
 }
 
 .article {
@@ -98,7 +96,7 @@ body {
   margin: auto;
   overflow: hidden;
 
-  @include tablet{
+  @include tablet {
     max-width: 75%;
   }
 
@@ -125,9 +123,8 @@ body {
     padding: 1rem 0;
   }
 
-
-  &__wrapper{
-    @include tablet{
+  &__wrapper {
+    @include tablet {
       display: flex;
       justify-content: space-between;
     }
@@ -138,59 +135,55 @@ body {
     font-size: 1rem;
     font-weight: 600;
     padding: 1rem 0;
-    @include tablet{
+    @include tablet {
       width: 48%;
     }
   }
 }
 //////gallery section start///////
-.gallery{
-    background-color: $secondaryWhite;
+.gallery {
+  background-color: $secondaryWhite;
 
-    &__heading{
-        font-size: 2rem;
+  &__heading {
+    font-size: 2rem;
+  }
+
+  &__image {
+    margin-top: 1.1rem;
+    width: 100%;
+    @include tablet {
+      width: 31.33%;
+      margin: 6px;
     }
-    
-    &__image{
-      margin-top: 1.1rem;
-      width: 100%;
-      @include tablet{
-        width: 31.33%;
-        margin: 6px;
-      }
-     }
-    &__wrapper{
-        margin: 1rem auto;
-       max-width: 90%;
+  }
+  &__wrapper {
+    margin: 1rem auto;
+    max-width: 90%;
 
-       @include tablet{
-        display: flex;
-        flex-wrap: wrap;
-       }
-
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
     }
+  }
 }
-
-
 
 ////footer start///////
 
-.footer{
+.footer {
   background-color: $primaryBlack;
   color: white;
-  &__information{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  &__paragraph{
-    line-height: 3rem;
-  }
-
-  &__wrapper{
+  &__information {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__paragraph {
+      line-height: 3rem;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
   }
 }
-}
-
