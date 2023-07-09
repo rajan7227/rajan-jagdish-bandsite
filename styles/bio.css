@@ -166,6 +166,41 @@ body {
   background-color: #323232;
   color: white;
 }
+.footer__container {
+  max-width: 82%;
+  margin: auto;
+}
+.footer__logo--name {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo--name {
+    font-size: 2rem;
+    display: contents;
+  }
+}
+.footer__header {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    padding-left: 3rem;
+    width: 68%;
+  }
+}
+.footer__wrapper--icons {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__social {
+    display: flex;
+  }
+}
 .footer__information {
   display: flex;
   flex-direction: column;

@@ -172,6 +172,53 @@ body {
 .footer {
   background-color: $primaryBlack;
   color: white;
+
+  &__container {
+    max-width: 82%;
+    margin: auto;
+  }
+
+  &__logo--name{
+    display: none;
+    @include tablet{
+      font-size: 2rem;
+      display: contents;
+    }
+  }
+
+  &__header{
+    font-size: 2rem;
+    }
+
+  &__wrapper {
+
+
+    @include tablet{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    padding-left: 3rem;
+    width: 68%;
+  }
+
+
+   &--icons {
+    display: flex;
+    gap: 2rem;  
+    }   
+  }
+
+ 
+
+
+  &__social{
+    @include tablet{
+    display: flex;
+    }
+  }
+
+
   &__information {
     display: flex;
     flex-direction: column;
