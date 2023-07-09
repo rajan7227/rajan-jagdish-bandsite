@@ -1,0 +1,196 @@
+@import "./partials/breakpoints";
+@import "./partials/color";
+@import "./partials/flexcenter";
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "CustomFont" sans-serif;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+}
+
+.header {
+  background-color: $primaryBlack;
+  display: block;
+  color: $primaryWhite;
+
+  @include tablet{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+
+  &__title {
+    @include flex-center;
+
+    @include desktop{
+      @include flex-center;
+
+    }
+
+    &--name {
+      font-weight: 300;
+      font-size: 2rem;
+      padding-top: 1rem;
+
+      @include tablet{
+        padding: 0;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+
+    &--title {
+      font-size: 1rem;
+      @include tablet{
+        margin: 0 3rem;
+      }
+    }
+  }
+}
+
+// HERO SECTION//
+
+.hero {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 13rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include tablet{
+    height: 26rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $primaryWhite;
+    padding: 2rem;
+  }
+}
+
+.article__title {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin-left: 1rem;
+
+}
+
+.article {
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+
+  @include tablet{
+    max-width: 75%;
+  }
+
+  &__bold {
+    font-size: 0.9em;
+    line-height: 2.2rem;
+    font-weight: 900;
+    margin: 1rem 0;
+  }
+
+  &__boldtitle {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+//paragraph start
+
+.paragraph {
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+
+
+  &__wrapper{
+    @include tablet{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__first,
+  &__secound {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    @include tablet{
+      width: 48%;
+    }
+  }
+}
+//////gallery section start///////
+.gallery{
+    background-color: $secondaryWhite;
+
+    &__heading{
+        font-size: 2rem;
+    }
+    
+    &__image{
+      margin-top: 1.1rem;
+      width: 100%;
+      @include tablet{
+        width: 31.33%;
+        margin: 6px;
+      }
+     }
+    &__wrapper{
+        margin: 1rem auto;
+       max-width: 90%;
+
+       @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+       }
+
+    }
+}
+
+
+
+////footer start///////
+
+.footer{
+  background-color: $primaryBlack;
+  color: white;
+  &__information{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__paragraph{
+    line-height: 3rem;
+  }
+
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+}
+}
+
