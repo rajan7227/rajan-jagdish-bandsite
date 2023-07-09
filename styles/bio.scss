@@ -26,7 +26,6 @@ body {
     background-color: $primaryBlack;
   }
 
-
   @include tablet {
     display: flex;
     justify-content: flex-start;
@@ -65,7 +64,6 @@ body {
     justify-content: space-around;
     gap: 2rem;
 
-
     &--title {
       font-family: "CustomFont", sans-serif;
 
@@ -73,7 +71,7 @@ body {
       font-weight: 200;
       line-height: 3rem;
 
-      &:hover{
+      &:hover {
         border-bottom: 2px solid white;
       }
 
@@ -81,7 +79,6 @@ body {
         margin: 0 3rem;
       }
     }
- 
   }
 }
 
@@ -89,7 +86,7 @@ body {
 
 .hero {
   background-image: url(../Assets/Images/hero-bio.jpg);
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 
   background-position: center;
   background-size: cover;
@@ -212,7 +209,6 @@ body {
     margin: auto;
   }
 
-
   &__heading {
     font-size: 2rem;
   }
@@ -230,8 +226,8 @@ body {
     }
   }
 
-  &__image:hover{
-    filter:none;
+  &__image:hover {
+    filter: none;
   }
 
   /////////////////////////////////////////
@@ -246,8 +242,6 @@ body {
     }
   }
 }
-
-
 
 ////footer start///////
 
@@ -265,7 +259,7 @@ body {
     }
   }
 
-  &__email{
+  &__email {
     color: azure;
   }
 
