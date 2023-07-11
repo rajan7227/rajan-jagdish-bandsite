@@ -1,4 +1,22 @@
 @font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTProDemi.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTPro.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTProBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
   font-family: "CustomFont";
   src: url(Assets/Font/AvenirNextLTPro-Regular.otf) format("truetype");
 }
@@ -10,6 +28,7 @@
 
 body {
   font-family: "CustomFont", sans-serif;
+  text-decoration: none;
 }
 
 .header {

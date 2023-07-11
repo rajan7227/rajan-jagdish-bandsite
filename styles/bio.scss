@@ -1,6 +1,7 @@
 @import "./partials/breakpoints";
 @import "./partials/color";
 @import "./partials/flexcenter";
+@import "./partials/typography";
 
 @font-face {
   font-family: "CustomFont";
@@ -15,6 +16,7 @@
 
 body {
   font-family: "CustomFont", sans-serif;
+  text-decoration: none;
 }
 
 .header {

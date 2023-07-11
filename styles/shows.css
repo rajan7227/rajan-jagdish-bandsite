@@ -1,0 +1,53 @@
+@import url(./partials/_backgroundimage.scss);
+@import url(./partials/_color.scss);
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTProDemi.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTPro.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../../Assets/Font/Alternativefiles/AvenirNextLTProBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+.show {
+  background-image: url(../Assets/Images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 16rem;
+}
+.show__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+.show__title {
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+}
+.show__name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+}
+.show__music {
+  width: 100%;
+  height: 7rem;
+  font-size: 2rem;
+  font-weight: 400;
+}/*# sourceMappingURL=shows.css.map */
