@@ -2,6 +2,19 @@
 @import url(./partials/_color.scss);
 @import "./partials/typography";
 
+
+#logo{
+    background-image: url(../Assets/Logo/Logo-bandsite.svg);
+    background-position: center;
+    width: 118px;
+    height: 21px;
+    background-repeat: no-repeat;
+    padding: 1rem;
+
+  
+  }
+
+
 .show{
     background-image: url(../Assets/Images/hero-shows.jpg);
     background-position: center;

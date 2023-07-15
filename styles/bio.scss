@@ -3,6 +3,7 @@
 @import "./partials/flexcenter";
 @import "./partials/typography";
 
+
 @font-face {
   font-family: "CustomFont";
   src: url(Assets/Font/AvenirNextLTPro-Regular.otf) format("truetype");
@@ -17,6 +18,13 @@
 body {
   font-family: "CustomFont", sans-serif;
   text-decoration: none;
+}
+
+#logo{
+  background-image: url(../Assets/Logo/Logo-bandsite.svg);
+  width: 100px;
+  height: 100px;
+
 }
 
 .header {
@@ -204,6 +212,7 @@ body {
 }
 //////gallery section start///////
 .gallery {
+
   background-color: $secondaryWhite;
 
   @include desktop {
@@ -244,6 +253,50 @@ body {
     }
   }
 }
+
+
+//////comment sectionn start
+
+.comment{
+
+
+  &__profile{
+   width: 2rem;
+   height: 2rem;
+   border-radius: 3rem;
+   padding: .5rem;
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    }
+
+  &__field{
+    display: flex;
+    flex-direction: column;
+
+
+    *{
+      margin-bottom: 0.5rem;
+    }
+    
+  }
+
+  &__button{
+    width: 50%;
+
+  }
+
+  &__title{
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+
+/// comment section end
 
 ////footer start///////
 
