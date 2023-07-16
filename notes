@@ -34,3 +34,18 @@ party__wrapper.appendChild(party__location);
 
 
 ///looping the array data to elements
+
+<article class="renderComment" id="renderComment">
+<div class="renderComment__profile">
+  <img class="profile" />
+</div>
+<div class="renderComment__details">
+  <div class="renderComment__first">
+    <div class="renderComment__name"></div>
+    <div class="renderComment__date"></div>
+  </div>
+  <div class="renderComment__secound">
+    <p class="renderComment__comment"></p>
+  </div>
+</div>
+</article>
