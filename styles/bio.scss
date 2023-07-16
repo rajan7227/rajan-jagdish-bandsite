@@ -15,10 +15,14 @@ body {
   box-sizing: border-box;
 }
 
-#logo {
+#logo{
   background-image: url(../Assets/Logo/Logo-bandsite.svg);
-  width: 100px;
-  height: 100px;
+  background-position: center;
+  width: 118px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+
+
 }
 
 .header {
