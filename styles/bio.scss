@@ -1,11 +1,7 @@
 @import "./partials/breakpoints";
 @import "./partials/color";
 @import "./partials/flexcenter";
-
-@font-face {
-  font-family: "CustomFont";
-  src: url(Assets/Font/AvenirNextLTPro-Regular.otf) format("truetype");
-}
+@import "./partials/typography";
 
 * {
   margin: 0;
@@ -14,7 +10,19 @@
 }
 
 body {
-  font-family: "CustomFont", sans-serif;
+  font-family: "AvenirNext";
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#logo{
+  background-image: url(../Assets/Logo/Logo-bandsite.svg);
+  background-position: center;
+  width: 118px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+
+
 }
 
 .header {
@@ -48,7 +56,7 @@ body {
     }
 
     &--name {
-      font-family: "CustomFont", sans-serif;
+      font-family: "AvenirNext";
       font-weight: 100;
       font-size: 2rem;
       line-height: 3.2rem;
@@ -65,11 +73,13 @@ body {
     gap: 2rem;
 
     &--title {
-      font-family: "CustomFont", sans-serif;
+      font-family: "AvenirNext";
 
       font-size: 1rem;
       font-weight: 200;
       line-height: 3rem;
+      color: $primaryWhite;
+      font-weight: 600;
 
       &:hover {
         border-bottom: 2px solid white;
@@ -193,7 +203,7 @@ body {
   &__first,
   &__secound {
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 600;
     padding: 1rem 0;
     @include tablet {
       width: 48%;
@@ -243,6 +253,138 @@ body {
   }
 }
 
+//////comment sectionn start
+
+.comment {
+  &__profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+    @include tablet {
+      width: 46px;
+      height: 46px;
+    }
+
+    &--name {
+      height: 2rem;
+      border-radius: 0.4rem;
+      background-color: #fafafa;
+      border-color: $primarySilver;
+      font-family: "AvenirNext";
+      padding: 4px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    @include tablet {
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    border-style: none;
+    width: 85%;
+
+    * {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__button {
+    background-color: $primaryBlack;
+    color: white;
+    padding: 0.5rem;
+    font-family: "AvenirNext";
+    border-radius: 0.3rem;
+    border-style: none;
+
+    @include tablet {
+      max-width: 30%;
+      margin-left: 70%;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin-left: 1.5rem;
+    color: $primaryBlack;
+    padding: 2 rem;
+
+    @include tablet {
+      max-width: 1024px;
+      margin: auto;
+    }
+  }
+}
+
+label {
+  font-size: 0.7rem;
+  color: $primarySilver;
+  font-family: "AvenirNext";
+}
+
+textarea {
+  padding: 4px;
+}
+
+/// comment section end
+///render comments start
+///
+
+.pastComment {
+  max-width: 95%;
+  margin: auto;
+
+  @include tablet {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+.renderComment {
+  display: flex;
+
+  * {
+    padding: 3px;
+  }
+
+  &__first {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__date {
+    color: $primarySilver;
+    font-weight: 600;
+  }
+
+  &__comment {
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  &__profile {
+    img.profile {
+      background-color: #e1e1e1;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 3rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+///render comments end
+
 ////footer start///////
 
 .footer {
@@ -261,6 +403,7 @@ body {
 
   &__email {
     color: azure;
+    font-weight: 600;
   }
 
   &__logo--name {
@@ -274,12 +417,13 @@ body {
 
   &__header {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 600;
     width: 13rem;
 
     @include tablet {
-      font-weight: 600;
-      width: 13rem;
+      font-weight: 400;
+      color: $primaryWhite;
+      width: 15rem;
     }
   }
 
@@ -337,7 +481,7 @@ body {
   }
 
   &__copyright {
-    font-size: 1;
+    font-size: 12px;
     font-weight: 100;
     padding: 0.5rem 0;
     @include tablet {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/bio.css" />
-
+    <script src="./scripts/index-page.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -12,12 +12,14 @@
       <div class="header">
         <div class="header__title">
           <a href="./index.html"
-            ><h1 class="header__title--name">BANDSITE</h1></a
+            ><img id="logo"></a
           >
         </div>
         <div class="header__nav">
           <a><h4 class="header__nav--title">Biography</h4></a>
-          <a><h4 class="header__nav--title">Shows</h4></a>
+          <a href="./pages/shows.html"
+            ><h4 class="header__nav--title">Shows</h4></a
+          >
         </div>
       </div>
     </header>
@@ -125,6 +127,31 @@
         </div>
       </div>
 
+    </section>
+    <section class="comment">
+      <h4 class="comment__title">Join the Conversation</h4>
+      <div class="comment__wrapper">
+        <div>
+          <img
+            class="comment__profile"
+            src="./Assets/Images/Mohan-muruge.jpg"
+          />
+        </div>
+        <div class="comment__field">
+          <label for="name">NAME</label>
+          <input
+            type="name"
+            class="comment__profile--name"
+            id="name"
+            placeholder="Enter your name"
+          />
+          <label for="comment">COMMENT</label>
+          <textarea class="comment__profile--comment" rows="5" cols="30" placeholder="Add a new comment" id="comment"></textarea>
+
+          <button class="comment__button">COMMENT</button>
+        </div>
+      </div>
+      <div class="pastComment" id="pastComment"></div>
     </section>
     <footer class="footer">
       <div class="footer__container">
