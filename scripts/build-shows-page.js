@@ -29,23 +29,7 @@ const shows = [
     venue: "Press Club",
     location: "San Francisco",
   },
-];
-
-
-/* <article class="shows">
-      <h2 class="party__title">Shows</h2>
-      <div class="party__wrapper">
-        <p class="party__date">date</p>
-        <p class="party__venue">venue</p>
-        <p class="party__location">location</p>
-
-
-      </div> */
-
-
-    
-    
-    
+];    
       const showContainer = document.querySelector(".shows");
 
 const heading = document.createElement("h2");
