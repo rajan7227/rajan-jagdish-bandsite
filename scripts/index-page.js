@@ -35,10 +35,16 @@ const getComments = () => {
         renderElement.classList.add("renderComment");
         parentElement.appendChild(renderElement);
 
-        // Create profile container for the comment
+        // Create profile container for the image
         const profileContainer = document.createElement("div");
         profileContainer.className = "renderComment__profile";
         renderElement.appendChild(profileContainer);
+
+        //creating an avatar image
+        const profileImg = document.createElement("img");
+        profileImg.classList.add("profile");
+        profileContainer.appendChild(profileImg);
+
 
         // Create details container for the comment
         const detailsContainer = document.createElement("div");
