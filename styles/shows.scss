@@ -136,9 +136,8 @@
 
         *{
             margin: 0 .8rem  ;
-            padding-bottom: .5rem;
+            padding: .5rem;
             @include tablet{
-                padding-bottom: .9rem;
             }
         }
 
@@ -173,8 +172,12 @@
 }
 
 
-h3{
+.h3{
     @include headingstyle; 
+
+    @include tablet{
+        display: none;
+    }
 }
 
 p{
@@ -182,12 +185,31 @@ p{
     width: 9rem;
 }
 
-p.para__bold{
-    font-weight: 400;
-    width: 9rem;
+.para__bold{
+    font-weight: 100;    width: 9rem;
 }
 
 .footer__copyright{
     width: 100%;
+}
+
+.singleHeading{
+    display: none;
+
+    @include tablet {
+    display: flex;
+    max-width: 655px;
+    margin: auto;
+
+    h3{
+    font-size: 0.7rem;
+    color: #afafaf;
+    padding-right: 10rem;  
+    font-weight: 100;
+    margin-bottom: 1rem;
+
+    }
+
+}
 }
 

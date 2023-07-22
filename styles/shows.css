@@ -143,12 +143,7 @@
 }
 .party__wrapper * {
   margin: 0 0.8rem;
-  padding-bottom: 0.5rem;
-}
-@media screen and (min-width: 768px) {
-  .party__wrapper * {
-    padding-bottom: 0.9rem;
-  }
+  padding: 0.5rem;
 }
 .party__button button {
   width: 90%;
@@ -176,10 +171,15 @@
   background-color: #E1E1E1;
 }
 
-h3 {
+.h3 {
   font-size: 0.7rem;
   color: #afafaf;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .h3 {
+    display: none;
+  }
 }
 
 p {
@@ -187,11 +187,29 @@ p {
   width: 9rem;
 }
 
-p.para__bold {
-  font-weight: 400;
+.para__bold {
+  font-weight: 100;
   width: 9rem;
 }
 
 .footer__copyright {
   width: 100%;
+}
+
+.singleHeading {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .singleHeading {
+    display: flex;
+    max-width: 655px;
+    margin: auto;
+  }
+  .singleHeading h3 {
+    font-size: 0.7rem;
+    color: #afafaf;
+    padding-right: 10rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
