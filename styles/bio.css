@@ -262,16 +262,16 @@ body {
 }
 
 .comment__profile {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 2rem;
   padding: 0.5rem;
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .comment__profile {
-    width: 46px;
-    height: 46px;
+    width: 32px;
+    height: 32px;
   }
 }
 .comment__profile--name {
@@ -296,7 +296,7 @@ body {
   display: flex;
   flex-direction: column;
   border-style: none;
-  width: 85%;
+  width: 100%;
 }
 .comment__field * {
   margin-bottom: 0.5rem;
@@ -352,6 +352,7 @@ textarea {
 
 .renderComment {
   display: flex;
+  gap: 0;
 }
 .renderComment * {
   padding: 3px;
@@ -367,6 +368,7 @@ textarea {
 .renderComment__comment {
   line-height: 2rem;
   font-weight: 600;
+  width: 500px;
 }
 .renderComment__profile img.profile {
   background-color: #e1e1e1;
@@ -473,4 +475,18 @@ textarea {
   .footer__copyright {
     font-size: 1rem;
   }
+}
+
+.renderComment:hover {
+  background-color: rgba(236, 236, 236, 0.5843137255);
+}
+
+.delete-button {
+  height: 30px;
+  width: 60px;
+  margin: auto;
+  color: black;
+  border-color: grey;
+  border-radius: 10px;
+  font-family: "AvenirNext";
 }/*# sourceMappingURL=bio.css.map */

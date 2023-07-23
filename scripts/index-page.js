@@ -18,6 +18,10 @@ const getComments = () => {
 
       const comments = response.data;
       console.log(comments)
+
+      // Reverse the comments array to display the newest comment first
+      comments.reverse();
+      
       if (!comments || !Array.isArray(comments)) {
         // Check if the commentsData is valid and an array
         console.error("Error fetching comments: Invalid response format");
@@ -69,11 +73,16 @@ const getComments = () => {
         nameElement.innerText = comment.name;
         firstSection.appendChild(nameElement);
 
+        //converting date format
+        const dateItems = new Date (comment.timestamp);
+        const formatDATE = dateItems.toDateString();
+
         // Create the date element
         const dateElement = document.createElement("div");
         dateElement.className = "renderComment__date";
-        dateElement.innerText = comment.date;
+        dateElement.innerText = formatDATE;
         firstSection.appendChild(dateElement);
+
 
         // Create the second section of details
         const secondSection = document.createElement("div");
@@ -92,9 +101,7 @@ const getComments = () => {
     });
 };
 
-// Render the comments when the page loads
 getComments();
-
 
 // Handle the deletion of a comment
 function handleDeleteComment(commentId) {
@@ -108,7 +115,7 @@ function handleDeleteComment(commentId) {
       commentId = commentId.filter((comment) => comment.id !== commentId);
 
       // Re-render the comments without the deleted comment
-      renderComments();
+     getCommentsComments();
     })
     .catch((error) => {
       console.error("Error deleting comment:", error);
@@ -133,35 +140,24 @@ function handleCommentSubmission(event) {
     alert("Please fill in your name and comment.");
     return;
   }
-
   // Create a new comment object with the entered values and current date
   const newComment = {
     name: name,
     comment: comment,
   };
-
   //posting the new comments to api 
   axios
     .post(commentsUrl, newComment)
     .then((response) =>{
-  
-    comment.unshift(newComment)
+
 
     // Clear the input values
     nameInput.value = "";
-    commentInput.value = "";
-  
+    commentInput.value = ""; 
 })
-
-
   // Render all the comments with the new comment included
-  renderComments();
-
-  // Scroll to the top of the comments section
-  parentElement.scrollTop = 0;
+  getComments();
 }
-
-// Render the existing comments when the page loads
 
 
 // Add an event listener to the submit button for comment submission

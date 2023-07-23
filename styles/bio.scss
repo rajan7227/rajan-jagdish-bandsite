@@ -257,15 +257,15 @@ body {
 
 .comment {
   &__profile {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 2rem;
     padding: 0.5rem;
     margin-top: 1rem;
 
     @include tablet {
-      width: 46px;
-      height: 46px;
+      width: 32px;
+      height: 32px;
     }
 
     &--name {
@@ -292,7 +292,7 @@ body {
     display: flex;
     flex-direction: column;
     border-style: none;
-    width: 85%;
+    width: 100%;
 
     * {
       margin-bottom: 0.5rem;
@@ -353,6 +353,7 @@ textarea {
 
 .renderComment {
   display: flex;
+  gap: 0;
 
   * {
     padding: 3px;
@@ -371,6 +372,7 @@ textarea {
   &__comment {
     line-height: 2rem;
     font-weight: 600;
+    width: 500px;
   }
   &__profile {
     img.profile {
@@ -488,4 +490,20 @@ textarea {
       font-size: 1rem;
     }
   }
+}
+
+.renderComment:hover{
+  background-color: #ececec95;
+}
+
+
+//delete button
+.delete-button{
+  height: 30px;
+  width: 60px;
+  margin: auto;
+  color: black;
+  border-color: grey;
+  border-radius: 10px;
+  font-family: "AvenirNext";
 }
